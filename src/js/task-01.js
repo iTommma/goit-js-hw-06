@@ -9,10 +9,11 @@
 
 const menuItemsByClass = document.querySelectorAll('.item');
 
-console.log(menuItemsByClass.length);
-
+console.log(`Number of categories: ${menuItemsByClass.length}`);
+console.log(``);
 for (const items of menuItemsByClass) {
-    console.log(items.querySelector('h2').innerText);
-    console.log(items.querySelectorAll('li').length);
+    console.log(`Category: ${ items.querySelector('h2').innerText }`);
+    console.log(`Elements: ${items.querySelectorAll('li').length}`);
+    console.log(``);
 }
 
