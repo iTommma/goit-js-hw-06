@@ -16,7 +16,7 @@ const images = [
 // перебрати масив і стврити елементи 
 const createGalaryEl = images.map((el,idx,arr) => { 
   const { url, alt } = el;
-  console.log(idx,url,alt);
+  // console.log(idx,url,alt);
   
   return `
     <li class='gallery-item'>
@@ -25,11 +25,12 @@ const createGalaryEl = images.map((el,idx,arr) => {
  } )
 
 // знайти елемент Юл
-const list = document.querySelector('.gallery')
-console.log(list);
+const list = document.querySelector('.gallery');
+// console.log(list);
 
 // повернути галерею
-list.insertAdjacentHTML("afterbegin", createGalaryEl.join(''))
+list.insertAdjacentHTML("afterbegin", createGalaryEl.join(''));
+// console.log(createGalaryEl.join(''));
  
 
 
