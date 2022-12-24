@@ -14,17 +14,22 @@ const images = [
 ];
 
 // перебрати масив і стврити елементи 
-const createGalary = images.map(({ url, alt }) => { 
-  console.log( url, alt );
-  return `<li class='item'>
-    <img class='img' src="${url}" alt="${alt}">
-  </li>`
+const createGalaryEl = images.map((el,idx,arr) => { 
+  const { url, alt } = el;
+  console.log(idx,url,alt);
+  
+  return `
+    <li class='gallery-item'>
+      <img class='img' width="400px" src="${url}" alt="${alt}">
+    </li>`
  } )
 
 // знайти елемент Юл
 const list = document.querySelector('.gallery')
 console.log(list);
 
-console.log('1 ', createGalary);
 // повернути галерею
- list.insertAdjacentHTML("afterbegin", ...createGalary)
+list.insertAdjacentHTML("afterbegin", createGalaryEl.join(''))
+ 
+
+
