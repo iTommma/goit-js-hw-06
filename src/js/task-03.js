@@ -12,3 +12,19 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+// перебрати масив і стврити елементи 
+const createGalary = images.map(({ url, alt }) => { 
+  console.log( url, alt );
+  return `<li class='item'>
+    <img class='img' src="${url}" alt="${alt}">
+  </li>`
+ } )
+
+// знайти елемент Юл
+const list = document.querySelector('.gallery')
+console.log(list);
+
+console.log('1 ', createGalary);
+// повернути галерею
+ list.insertAdjacentHTML("afterbegin", ...createGalary)
