@@ -10,7 +10,7 @@ const ingredients = [
 // створюэмо елемент
 const creList = ing => {
   const element = document.createElement(`li`);
-  element.textContent = ing;
+  element.textContent = iАng;
   element.classList.add('item');
   return element
 }

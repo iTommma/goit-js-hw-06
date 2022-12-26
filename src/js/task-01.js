@@ -16,4 +16,3 @@ for (const items of menuItemsByClass) {
     console.log(`Elements: ${items.querySelectorAll('li').length}`);
     console.log(``);
 }
-

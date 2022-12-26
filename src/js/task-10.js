@@ -9,12 +9,12 @@ const divBoxes = document.querySelector("#boxes");
 // console.log(getRandomHexColor() );
 
 let amount = 0;
-// inputNumber.addEventListener( 'input', onNumber );
-buttonCreate.addEventListener("click", onNumber);
+// inputNumber.addEventListener( 'input', onbuttonCreateClick );
+buttonCreate.addEventListener("click", onbuttonCreateClick);
 buttonDestroy.addEventListener("click", () => (divBoxes.innerHTML = ""));
 
 // Перевірка на валідність
-function onNumber() {
+function onbuttonCreateClick() {
   amount = inputNumber.valueAsNumber;
   if (amount < 1 || amount > 100) {
     alert("Кількість елементів має бути від 1 до 100");

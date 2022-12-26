@@ -1,29 +1,26 @@
-
-const loginForm = document.querySelector('.login-form');
+const loginForm = document.querySelector(".login-form");
 const submitArr = {};
 // console.log(loginForm);
 
-loginForm.addEventListener('submit', onSubmit);
+loginForm.addEventListener("submit", onLoginFormSubmit);
 
+function onLoginFormSubmit(event) {
+  event.preventDefault();
+  // console.log(event.currentTarget);
 
-function onSubmit(event) {
-    event.preventDefault();
-    // console.log(event.currentTarget);
+  const {
+    elements: { email, password },
+  } = event.currentTarget;
+  // console.log(email.value, password.value);
 
-    const {
-    elements: { email, password }
-    } = event.currentTarget;
-    // console.log(email.value, password.value);
-
-    if (email.value === '' || password.value === '') {
-        alert('Всі поля повинні бути заповнені')
-    } else {
-        submitArr.email = email.value;
-        submitArr.password = password.value;
-        console.log(submitArr);
-        event.currentTarget.reset()
-    }
-    
+  if (email.value === "" || password.value === "") {
+    alert("Всі поля повинні бути заповнені");
+  } else {
+    submitArr.email = email.value;
+    submitArr.password = password.value;
+    console.log(submitArr);
+    event.currentTarget.reset();
+  }
 }
 
 // Напиши скрипт управління формою логіна.
